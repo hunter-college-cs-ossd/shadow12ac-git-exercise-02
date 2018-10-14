@@ -29,6 +29,8 @@
 #include <cstdio>
 #include <cstring>
 #include <sstream>
+#include <limits>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -44,17 +46,34 @@ typedef ostream& (*output_function) (const ostream & out);
 
 ******************************************************************************/
 
+fstream& StrFromLine(fstream& file, unsigned int Exactlocation){
+	for(unsigned int currentLoc = 0; currentLoc < Exactlocation-1; currentLoc++){
+		file.ignore(numeric_limits<streamsize>::max(), '\n');
+	}
+	return file;
+}
 
-
-
+ostream& shadow12ac_oddity(const ostream & out){}
 
 
 int main(int argc, char* argv[] )
 {
+	if(argc < 2){
+		cerr << "Usage: ./executable textFile " << endl;
+		return 0;
+	}
 
-    // Calls to output functions
-
-
+	stringstream strFile(argv[1]); //can also do char *file1 = argv[1]/stringstream(argv[1])
+	string fileName;
+	strFile >> fileName;
+	fstream odditiesFile(fileName.c_str());
+	srand (time(NULL));
+	StrFromLine(odditiesFile, (rand() % 15 + 1));
+	string oddityStr;
+	getline(odditiesFile, oddityStr);
+	output_function testFunc = shadow12ac_oddity;
+	testFunc(cout << oddityStr << endl);
 
     return 0;
 }
+
