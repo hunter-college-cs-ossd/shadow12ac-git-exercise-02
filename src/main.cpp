@@ -1,8 +1,3 @@
-
-
-
-
-
 /******************************************************************************
   Title          : main.cpp
   Author         : FrancisXIrizarry
@@ -32,6 +27,7 @@
  #include <cstring>
  #include <sstream>
 
+
   using namespace std;
  /******************************************************************************/
  // The syntax of the output function that must be used to print an oddity.
@@ -42,21 +38,25 @@ typedef ostream& (*output_function) ( ostream & out);
  ******************************************************************************/
 //typedef ostream& (*output_function) (const ostream & out);
 
-ostream& shadow12ac_oddity(ostream & out);
 
+
+
+
+ostream& FrancisXIrizarry_oddity(ostream & out);
 
 
 int main(int argc, char* argv[] )
 {
-	output_function shadow12ac;
-        shadow12ac = shadow12ac_oddity;
-	shadow12ac(cout);
+	output_function FrancisXIrizarry;
+   	FrancisXIrizarry = FrancisXIrizarry_oddity;
+        FrancisXIrizarry(cout);
         return 0;
 
 
 } 
 
-ostream& shadow12ac_oddity(ostream & out){
+
+ostream& FrancisXIrizarry_oddity(ostream & out){
     out << "Why do we drive on parkways and park on driveways?" << endl;
 	
    return out;
