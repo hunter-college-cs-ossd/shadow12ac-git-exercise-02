@@ -82,6 +82,18 @@ int main(int argc, char* argv[] )
 
 } 
 
+/***********************************
+Original Design, Can be updated Easily. 
+***********************************/
+ /*
+ostream& shadow12ac_oddity(ostream & out);
+ostream& shadow12ac_oddity(ostream & out){
+    out << "Why do we drive on parkways and park on driveways?" << endl;
+	
+   return out;
+}
+*/
+
 
 
 
