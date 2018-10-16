@@ -48,8 +48,9 @@ ostream& shadow12ac_oddity(ostream & out);
 
 int main(int argc, char* argv[] )
 {
-
-	shadow12ac_oddity(cout);
+	output_function shadow12ac;
+        shadow12ac = shadow12ac_oddity;
+	shadow12ac(cout);
         return 0;
 
 
@@ -61,17 +62,6 @@ ostream& shadow12ac_oddity(ostream & out){
    return out;
 }
 
-/***********************************
-Original Design, Can be updated Easily. 
-***********************************/
- /*
-ostream& shadow12ac_oddity(ostream & out);
-ostream& shadow12ac_oddity(ostream & out){
-    out << "Why do we drive on parkways and park on driveways?" << endl;
-	
-   return out;
-}
-*/
 
 
 
