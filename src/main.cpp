@@ -1,6 +1,6 @@
 /******************************************************************************
   Title          : main.cpp
-  Author         : FrancisXIrizarry
+  Author         : Shadow12ac
   Created on     : October  7, 2018
   Description    : Displays random peculiar facts
   Purpose        : To exercise collaborative source code development
@@ -42,11 +42,14 @@ typedef ostream& (*output_function) ( ostream & out);
 
 
 
+ostream& starting_oddity( ostream & out);
 ostream& FrancisXIrizarry_oddity(ostream & out);
 
 
 int main(int argc, char* argv[] )
 {
+  starting_oddity(cout);
+  
 	output_function FrancisXIrizarry;
    	FrancisXIrizarry = FrancisXIrizarry_oddity;
         FrancisXIrizarry(cout);
@@ -55,28 +58,15 @@ int main(int argc, char* argv[] )
 
 } 
 
+ostream& starting_oddity(ostream & out){
+	out << "This is a collection of strange but true facts." << endl;
+	
+	return out;
+}
 
 ostream& FrancisXIrizarry_oddity(ostream & out){
     out << "Why do we drive on parkways and park on driveways?" << endl;
 	
    return out;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
