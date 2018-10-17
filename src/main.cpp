@@ -44,7 +44,7 @@ ostream& anupamdas104_oddity(ostream & out){
 	out << "Why is it that when you're driving and looking for an address, you turn down the volume on the radio?  \n";
 	return out;
 }
-
+ostream& lashana29_oddity(ostream & out);
 
 
 int main(int argc, char* argv[] )
@@ -56,6 +56,7 @@ int main(int argc, char* argv[] )
         FrancisXIrizarry(cout);
   
  anupamdas104_oddity(cout); 
+	lashana29_oddity(cout);
         return 0;
 
 
@@ -73,3 +74,7 @@ ostream& FrancisXIrizarry_oddity(ostream & out){
    return out;
 }
 
+ostream& lashana29_oddity(ostream& out) {
+	out << "Why do they put Braille dots on the keypad of the drive-up ATM?" << endl;
+	return out;
+}
