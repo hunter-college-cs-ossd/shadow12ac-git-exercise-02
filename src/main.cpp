@@ -38,12 +38,13 @@ typedef ostream& (*output_function) ( ostream & out);
  ******************************************************************************/
 //typedef ostream& (*output_function) (const ostream & out);
 
-
-
-
-
 ostream& starting_oddity( ostream & out);
 ostream& FrancisXIrizarry_oddity(ostream & out);
+ostream& anupamdas104_oddity(ostream & out){
+	out << "Why is it that when you're driving and looking for an address, you turn down the volume on the radio?  \n";
+	return out;
+}
+
 
 
 int main(int argc, char* argv[] )
@@ -53,6 +54,8 @@ int main(int argc, char* argv[] )
 	output_function FrancisXIrizarry;
    	FrancisXIrizarry = FrancisXIrizarry_oddity;
         FrancisXIrizarry(cout);
+  
+ anupamdas104_oddity(cout); 
         return 0;
 
 
